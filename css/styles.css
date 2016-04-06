@@ -1,0 +1,94 @@
+/* normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
+@import url('normalize.css');
+
+/*font stacks*/
+/*https://ru.wikipedia.org/wiki/Content_Delivery_Network READ*/
+/*https://developers.google.com/fonts/?hl=ru READ*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+
+
+/* base styles */
+/*https://css-tricks.com/box-sizing/ READ*/
+*{
+    box-sizing: border-box;
+}
+
+html{ 
+    /*http://www.w3schools.com/cssref/css_websafe_fonts.asp READ*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/*https://css-tricks.com/all-about-floats READ*/
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+/* EO base styles */
+
+
+/* header */
+.header{
+    background-color: #16a085;
+    line-height: 50px; /*height of header*/
+}
+    /*https://css-tricks.com/different-ways-to-format-css/ READ*/
+    .header__logo{
+        position: relative;
+
+        text-decoration: none;
+        font-size: 16px;
+        color: #fff;
+    }
+        .header__logo:after{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            top: 0;
+            right: -12px;
+            border: 1px solid; /*border accepts colot of the parent*/
+        }
+
+/* EO header */
+
+/* navigation */
+.navigation{
+    float: right;
+    margin: 0; /*remove default 'ul' styles*/
+    margin-right: 40px;
+
+    list-style: none; /*remove default 'ul' styles*/
+    color: #9bded1;
+}
+
+    .navigation__item{
+        float: left;
+        margin-right: 12px;
+
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+        .navigation__item:hover{
+            color: #fff;
+        }
+        .navigation__item:last-child{
+            margin-right: 0;
+        }
+
+    .navigation__item--active{
+        color: #fff;       
+    }
+/* EO navigation 
