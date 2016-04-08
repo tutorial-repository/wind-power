@@ -4,7 +4,29 @@
 /*font stacks*/
 /*https://ru.wikipedia.org/wiki/Content_Delivery_Network READ*/
 /*https://developers.google.com/fonts/?hl=ru READ*/
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@font-face {
+    font-family: 'Lato-Hairline';
+    src: url('../fonts/Lato-Hairline.eot');
+    src: url('../fonts/Lato-Hairline.eot?#iefix')format('embedded-opentype'),
+    url('../fonts/Lato-Hairline.woff') format('woff'),
+    url('../fonts/Lato-Hairline.ttf') format('truetype');
+    
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Lato-Light';
+    src: url('../fonts/Lato-Light.eot');
+    src: url('../fonts/Lato-Light.eot?#iefix')format('embedded-opentype'),
+    url('../fonts/Lato-Light.woff') format('woff'),
+    url('../fonts/Lato-Light.ttf') format('truetype');
+    
+    font-style: normal;
+    font-weight: normal;
+}
 
 
 
@@ -29,11 +51,15 @@ html{
 
 /*https://css-tricks.com/all-about-floats READ*/
 .clearfix:after { 
-   content: "."; 
+   content: '.'; 
    visibility: hidden; 
    display: block; 
    height: 0; 
    clear: both;
+}
+
+h1, h2, h3, h4, h5{
+    margin: 0;
 }
 /* EO base styles */
 
@@ -91,4 +117,45 @@ html{
     .navigation__item--active{
         color: #fff;       
     }
-/* EO navigation 
+/* EO navigation */
+
+/* hero banner */
+/*https://www.tributemedia.com/blog/what-is-a-hero-banner READ (and try to google possible realizations etc..)*/
+.hero-banner{
+    margin-bottom: 80px;
+    padding: 160px 0 130px; /*from psd minus h1 line-height*/
+
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #354556;
+}
+    .hero-banner__heading, 
+    .hero-banner__description{
+        font-family: 'Lato-Hairline';
+    }
+    .hero-banner__heading{
+        font-size: 90px;
+        line-height: 140px; /*from .psd */
+        color: #fff;
+    }
+    .hero-banner__description{
+        margin-bottom: 65px;
+
+        font-size: 34px;
+        line-height: 40px;
+        color: #a5b6c7;
+    }
+    .hero-banner__link{
+        display: inline-block;
+        padding: 0 40px;
+
+        border: 1px solid rgba(255, 255, 255, .4); /*see layout in the psd */
+        border-radius: 5px;
+        
+        font-family: 'Lato-Light';
+        font-size: 16px;
+        line-height: 48px; /*setting height of the link by using 'line-height'*/
+        text-decoration: none;
+        color: #fff;
+    }
+/* EO hero banner */
