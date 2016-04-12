@@ -2,43 +2,7 @@
 @import url('normalize.css');
 
 /*font stacks*/
-/*https://ru.wikipedia.org/wiki/Content_Delivery_Network READ*/
-/*https://developers.google.com/fonts/?hl=ru READ*/
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-@font-face {
-    font-family: 'Lato-Hairline';
-    src: url('../fonts/Lato-Hairline.eot');
-    src: url('../fonts/Lato-Hairline.eot?#iefix')format('embedded-opentype'),
-    url('../fonts/Lato-Hairline.woff') format('woff'),
-    url('../fonts/Lato-Hairline.ttf') format('truetype');
-    
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Lato-Light';
-    src: url('../fonts/Lato-Light.eot');
-    src: url('../fonts/Lato-Light.eot?#iefix')format('embedded-opentype'),
-    url('../fonts/Lato-Light.woff') format('woff'),
-    url('../fonts/Lato-Light.ttf') format('truetype');
-    
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: 'Lato-Regular';
-    src: url('../fonts/LatoRegular.eot');
-    src: url('../fonts/LatoRegular.eot?#iefix')format('embedded-opentype'),
-    url('../fonts/LatoRegular.woff') format('woff'),
-    url('../fonts/LatoRegular.ttf') format('truetype');
-    
-    font-style: normal;
-    font-weight: normal;
-}
-
-
+@import url('fonts.css');
 
 
 /* base styles */
@@ -212,3 +176,44 @@ h1, h2, h3, h4, h5{
             color: #16a085;
         }
 /* EO trusted block */
+
+
+/* posts */
+.posts{
+    padding: 40px 0;
+    background-color: #ecf0f1;
+}
+    .posts__heading{
+        margin-bottom: 25px;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 28px;
+        text-transform: uppercase;
+        color: #2c3e50;
+    }
+    .posts__item{
+        float: left;
+        width: 33%;
+        padding-right: 30px; /*in case of border-box only*/
+    }
+    .posts__item:last-child{
+        padding-right: 0;   
+    }
+        .posts__item__image{
+            max-width: 100%;
+            margin-bottom: 15px;
+        }
+        .posts__item__heading{
+            margin-bottom: 15px;
+
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 18px;
+            color: #16a085;
+        }
+        .posts__item__description{
+            font-size: 14px;
+            line-height: 22px;
+            color: #7f8c8d;
+        }
+/* EO posts */
